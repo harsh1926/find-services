@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<style type="text/css">
+		body{
+			background: skyblue;
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+		img{
+			opacity: 0.5;
+		}
+		.slider{
+			width: 800px;
+			height: 500px;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+		.slides{
+			width: 500%;
+			height: 500px;
+			display: flex;
+		}
+		.slides input{
+			display: none;
+		}
+		.slide{
+			width: 20%;
+			transition: 2s;
+		}
+		.slide img{
+			width: 800px;
+			height: 500px;
+		}
+		.navigation-manual{
+               position: absolute;
+               width: 800px;
+               margin-top: -40px;
+               display: flex;
+               justify-content: center;
+		}
+		.manual-btn{
+			border: 2px solid blue;
+			padding: 5px;
+			border-radius: 10px;
+			cursor: pointer;
+			transition: 1s;
+		}
+		.manual-btn:not(:last-child){
+			margin-right: 40px;
+		}
+		.manual-btn:hover{
+			background: blue;
+		}
+		#radio1:checked ~ .first{
+			margin-left: 0;
+		}
+		#radio2:checked ~ .first{
+			margin-left: -20%;
+		}
+		#radio3:checked ~ .first{
+			margin-left: -40%;
+		}
+		#radio4:checked ~ .first{
+			margin-left: -60%;
+		}
+		.navigation-auto{
+			position: absolute;
+			display: flex;
+			width: 800px;
+			justify-content: center;
+			margin-top: 460px;
+
+		}
+		.navigation-auto div:not(:last-child){
+			margin-right: 40px;
+		}
+		.sign_up{
+			margin-left: 12px;
+			padding: 4px;
+			border-radius: 4px;
+			outline: none;
+			background-color: #d11aff;
+			border: 2px solid red;
+			font-family: sans-serif;
+			transition: 2s;
+
+
+		}
+		.sign_up:hover{
+			background-color: red;
+		}
+
+	</style>
+	<title>Find your job</title>
+
+</head>
+<body>
+
+	
+      <div class="slider">
+      	<div class="slides">
+      		<input type="radio" name="radio-btn" id="radio1">
+      		<input type="radio" name="radio-btn" id="radio2">
+      		<input type="radio" name="radio-btn" id="radio3">
+      		<input type="radio" name="radio-btn" id="radio4">
+
+      		<div class="slide first">
+      			<img src="img_1.jpg">
+      		</div>
+      		<div class="slide">
+      			<img src="img_2.jpg">
+      		</div>
+      		<div class="slide">
+      			<img src="img_3.jpg">
+      		</div>
+      		<div class="slide">
+      			<img src="img_4.jpg">
+      		</div>
+      		<div class="navigation-auto">
+      			<div class="auto-btn1"></div>
+      			<div class="auto-btn2"></div>
+      			<div class="auto-btn3"></div>
+      			<div class="auto-btn4"></div>
+
+      		</div>
+
+      		<div class="navigation-manual">
+      			<label for="radio1" class="manual-btn"></label>
+      			<label for="radio2" class="manual-btn"></label>
+      			<label for="radio3" class="manual-btn"></label>
+      			<label for="radio4" class="manual-btn"></label>
+      		</div>
+      	</div>
+      </div>
+  
+  
+      <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
+    <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
+      <h1 class="title-font font-medium text-3xl text-gray-900">Book your service appointment to make your life easier</h1>
+      <p class="leading-relaxed mt-4">You can book your appointment by selectig best places</p>
+    </div>
+    <button class="sign_up"><a href="Register.html"> Register</a></button>
+     <button class="sign_up"><a href="service.html"> Search service</a></button>
+      
+  </div>
+</section>
+
+</body>
+</html>
